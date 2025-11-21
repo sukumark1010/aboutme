@@ -1,0 +1,367 @@
+<!DOCTYPE dapp-root>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Kumar K - Senior IT Support Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #0f172a; /* Slate 900 */
+            --accent-color: #2dd4bf; /* Teal 400 */
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); }
+        .icon { width: 1.5rem; height: 1.5rem; }
+        
+        /* Animation Classes */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Sticky Navigation Styling */
+        #navbar {
+            background-color: rgba(15, 23, 42, 0.95); /* Semi-transparent dark bg */
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+
+        /* Scrollspy Active State */
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-link.active-nav {
+            color: white; /* Brighter color */
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 4px; /* Adjust padding for the border */
+        }
+        .nav-link:not(.active-nav):hover {
+            color: #d1d5db; /* Lighter gray on hover */
+        }
+
+        /* Unicode Star Styling */
+        .star { color: #facc15; /* Yellow 400 */ }
+        .star-empty { color: #6b7280; /* Gray 500 */ }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full shadow-lg hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center h-16">
+                <div class="flex space-x-6 text-sm font-medium text-gray-300">
+                    <a href="#intro" class="nav-link" data-section="intro">Introduction</a>
+                    <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                    <a href="#companies" class="nav-link" data-section="companies">Experience</a>
+                    <a href="#education-details" class="nav-link" data-section="education-details">Education</a>
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mx-auto max-w-7xl p-4 sm:p-8 pt-20 md:pt-24 lg:pt-32">
+        
+        <!-- HEADER / HERO SECTION -->
+        <section id="header" class="text-center py-16 sm:py-24 mb-16 reveal-item">
+            <!-- Profile Image Placeholder -->
+            <img class="w-32 h-32 rounded-full mx-auto shadow-2xl ring-4 ring-teal-400 object-cover" 
+                 src="https://placehold.co/128x128/1e293b/FFFFFF?text=SKK" 
+                 alt="Profile Picture Placeholder"
+                 onerror="this.src='https://placehold.co/128x128/1e293b/FFFFFF?text=SKK'">
+            
+            <h1 class="text-5xl sm:text-7xl font-extrabold mt-6 text-white tracking-tighter">
+                SURAJ KUMAR K
+            </h1>
+            <h2 class="text-2xl sm:text-3xl font-light mt-3 text-teal-400">
+                Senior IT Support Engineer & Shift Lead
+            </h2>
+            <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
+                7+ Years of IT Support Leadership, JSM Administration, and Global MDM Migration.
+            </p>
+        </section>
+
+        <!-- INTRODUCTION / SUMMARY SECTION -->
+        <section id="intro" class="section-content py-12 mb-16 border-b border-gray-700 reveal-item">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold mb-4 text-white">My Value Proposition</h3>
+                    <p class="text-base leading-relaxed text-gray-300">
+                        Senior IT Support Leader and <strong>Shift Lead</strong> with a history of driving enterprise IT operations and global employee support. I built expertise in <strong>Jira Service Management (JSM)</strong> administration, endpoint security, and leading large-scale projects like global MDM migrations.
+                    </p>
+                    <p class="text-base leading-relaxed mt-4 text-gray-300">
+                        I specialize in delivering Tier 3 technical expertise across macOS/Windows, implementing system automations to cut manual effort, and mentoring support teams. I'm seeking to leverage this blend of technical depth and leadership skills to excel in a challenging Senior IT Support environment.
+                    </p>
+                </div>
+                <!-- IT Support Image Placeholder -->
+                <div class="hidden md:block">
+                    <img class="w-full rounded-xl shadow-2xl" 
+                         src="https://placehold.co/400x300/1e293b/2dd4bf?text=IT+Service+Delivery" 
+                         alt="IT Service Delivery Placeholder"
+                         onerror="this.src='https://placehold.co/400x300/1e293b/2dd4bf?text=IT+Service+Delivery'">
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE SKILLS SECTION -->
+        <section id="skills" class="section-content py-12 mb-8 reveal-item">
+            <h3 class="text-3xl font-bold mb-8 text-white text-center border-b border-teal-400 pb-2">CORE TECHNICAL EXPERTISE</h3>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill Card 1: ITSM -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:bg-gray-700 transition reveal-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-teal-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.004 12.004 0 002.944 12a12.004 12.004 0 003.04 8.618z" /></svg>
+                    <h4 class="text-xl font-semibold text-white mb-2">ITSM & Automation</h4>
+                    <p class="text-sm text-gray-400"><strong>Jira Service Management (JSM) Admin</strong>, ServiceNow, Process Automation, ITIL Framework, Jira Automation, KB Optimization</p>
+                </div>
+
+                <!-- Skill Card 2: MDM -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:bg-gray-700 transition reveal-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-teal-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    <h4 class="text-xl font-semibold text-white mb-2">MDM & Endpoint</h4>
+                    <p class="text-sm text-gray-400"><strong>MDM Migration</strong>, Jamf, Intune/MEM, Workspace ONE, BitLocker, FileVault, macOS, Windows 10/11, iOS, Android</p>
+                </div>
+
+                <!-- Skill Card 3: Security & Identity -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:bg-gray-700 transition reveal-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-teal-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                    <h4 class="text-xl font-semibold text-white mb-2">Security & Identity</h4>
+                    <p class="text-sm text-gray-400">Okta, Azure AD, MFA, SSO, Active Directory (AD), Endpoint Security, Wi-Fi Certificate Management</p>
+                </div>
+
+                <!-- Skill Card 4: Leadership -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:bg-gray-700 transition reveal-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-teal-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20h-2m2 0h-2M2 9h10m-2 2v-4m0 0l-3 3m3-3l3 3m-9 10h7l-3 3-4-4z" /></svg>
+                    <h4 class="text-xl font-semibold text-white mb-2">Leadership & Training</h4>
+                    <p class="text-sm text-gray-400">Shift Lead Experience, Mentorship of 40+ Staff, Cerner Engineer Training, Incident Management, Process Improvement</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="companies" class="section-content py-12 mb-16 reveal-item">
+            <h3 class="text-3xl font-bold mb-10 text-white text-center border-b border-teal-400 pb-2">PROFESSIONAL EXPERIENCE</h3>
+
+            <!-- ORACLE Card -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-2xl mb-6 reveal-item">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-700 pb-3 mb-3">
+                    <h4 class="text-xl font-bold text-teal-400">Senior IT Support Engineer & Shift Lead</h4>
+                    <img class="h-6 w-auto" src="https://placehold.co/100x24/FF0000/FFFFFF?text=ORACLE+LOGO" alt="Oracle Logo Placeholder" onerror="this.src='https://placehold.co/100x24/FF0000/FFFFFF?text=ORACLE+LOGO'">
+                </div>
+                <p class="text-md font-semibold text-white mb-3">Oracle (OCI) | Bangalore, India | Oct 2021 – Present</p>
+                
+                <ul class="list-disc pl-5 text-gray-300 space-y-2 text-sm">
+                    <li><strong>Leadership & Mentorship:</strong> Served as designated <strong>Shift Lead</strong> for the Global Employee Support Team. Mentored and trained over <strong>40+ teammates</strong> and onboarded Cerner support engineers across APAC/EMEA.</li>
+                    <li><strong>ITSM Administration:</strong> Acted as the <strong>Jira Service Management (JSM) Administrator</strong>, providing 1st and 2nd line technical support via ticketing tool, phone, and chat. Log incidents, maintain records in JIRA SD, and ensure a high degree of service quality adhering to all service level agreements.</li>
+                    <li><strong>Critical Projects:</strong> Key member in the planning, testing, and implementation of a complex <strong>MDM Migration Project</strong> (Workspace One to in-house solution). Led the execution of the <strong>Wi-Fi Onboarding Service</strong> project involving a massive certificate change across the entire employee population.</li>
+                    <li><strong>Endpoint Security Specialist:</strong> Worked as SME for Bitlocker & McAfee Drive encryption issues; provided solutions, simplified the process, and was awarded a Spot award for tremendous support.</li>
+                    <li><strong>Support & Operations:</strong> Responded to inquiries, resolved hardware/software problems (laptops, phones, printers), managed timely communication on priority issues, and worked closely with the development team on related tools and issues.</li>
+                    <li><strong>Team Collaboration:</strong> Attended weekly team meetings, provided updates on open issues and escalations, monitored alerts for proactive measures, and handled escalations smoothly.</li>
+                    <li><strong>Achievement:</strong> Streamlined troubleshooting workflows and proactive process enhancements, <strong>cutting</strong> the average issue resolution time by <strong>30%</strong>.</li>
+                </ul>
+            </div>
+
+            <!-- MOUSER ELECTRONICS Card -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-xl mb-6 reveal-item">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-700 pb-3 mb-3">
+                    <h4 class="text-xl font-bold text-white">Desktop Technician L2 - SME: Endpoint Security</h4>
+                    <img class="h-6 w-auto" src="https://placehold.co/120x24/0047AB/FFFFFF?text=MOUSER+LOGO" alt="Mouser Electronics Logo Placeholder" onerror="this.src='https://placehold.co/120x24/0047AB/FFFFFF?text=MOUSER+LOGO'">
+                </div>
+                <p class="text-md font-semibold text-gray-300 mb-3">Mouser Electronics | Bangalore, India | Jul 2019 – Oct 2021</p>
+                <ul class="list-disc pl-5 text-gray-400 space-y-2 text-sm">
+                    <li>Supported over <strong>3000 end users</strong> across US, EMEA, and APAC regions over phone, email, and chat.</li>
+                    <li><strong>Endpoint Security & Remediation:</strong> Secured company assets by remediating vulnerabilities as per latest CVSS Scores (SME for Endpoint Security – Remediation & Response).</li>
+                    <li><strong>Asset Management:</strong> Kept company assets up-to-date using SCCM & analyzing errors in Software Centre, ensuring 99% compliance with company policies.</li>
+                    <li><strong>Troubleshooting:</strong> Worked on remote control over employee's computer to resolve problems such as performance issues and software installations, recording incidents in Incident Management tools.</li>
+                    <li>Managed employee records using AD management tools and created & managed KB articles for future reference.</li>
+                    <li><strong>Achievement:</strong> Developed an IT support playbook that improved first-call resolution by <strong>35%</strong>.</li>
+                </ul>
+            </div>
+            
+            <!-- CONCENTRIX Card -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-xl mb-6 reveal-item">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-700 pb-3 mb-3">
+                    <h4 class="text-xl font-bold text-white">Technical Support Associate L1 - SME: Escalations Handler</h4>
+                    <img class="h-6 w-auto" src="https://placehold.co/120x24/F5A623/FFFFFF?text=CONCENTRIX+LOGO" alt="Concentrix Logo Placeholder" onerror="this.src='https://placehold.co/120x24/F5A623/FFFFFF?text=CONCENTRIX+LOGO'">
+                </div>
+                <p class="text-md font-semibold text-teal-400 mb-3">Concentrix (HP Smart Friend) | Thane, India | Jul 2019 – Oct 2021</p>
+                <ul class="list-disc pl-5 text-gray-400 space-y-2 text-sm">
+                    <li>Supported over <strong>50,000 HP end users</strong> located in US and Canada.</li>
+                    <li>Resolved complex technical escalations and managed high-priority incidents for global customers.</li>
+                    <li>Identified and resolved hardware and software problems with Computers, printers, and secondary devices over remote tools.</li>
+                    <li>Logged and kept records of customer queries in CRM; analyzed cases to spot common trends and underlying problems.</li>
+                    <li>Provided floor support to all teams (Peers), helping Managers with identifying trending issues and training employees on latest trends.</li>
+                    <li><strong>Achievement:</strong> Reduced escalations by <strong>40%</strong> by improving internal troubleshooting processes.</li>
+                </ul>
+            </div>
+            
+            <!-- MAINTAC TECHNOLOGIES Card -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-xl reveal-item">
+                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-700 pb-3 mb-3">
+                    <h4 class="text-xl font-bold text-white">Network Analyst - SME: Escalations/Offline Desk Support</h4>
+                    <img class="h-6 w-auto" src="https://placehold.co/120x24/1F3366/FFFFFF?text=HCL/VOLVO+LOGO" alt="HCL Volvo IT Logo Placeholder" onerror="this.src='https://placehold.co/120x24/1F3366/FFFFFF?text=HCL/VOLVO+LOGO'">
+                </div>
+                <p class="text-md font-semibold text-teal-400 mb-3">Maintec Technologies for HCL (Volvo IT Employee Support) | Bangalore, India | Jun 2017 – Apr 2018</p>
+                <ul class="list-disc pl-5 text-gray-400 space-y-2 text-sm">
+                    <li>Supported over <strong>1000 end users</strong> across US, EMEA, and APAC regions for Volvo IT.</li>
+                    <li>Provided remote support as the SME for Escalations and Offline Desk Support (Onsite). Handled escalation calls for major incidents and coordinated with various teams.</li>
+                    <li>Troubleshooted employee issues encountered while installing software or using applications like MS Outlook.</li>
+                    <li>Managed employee records using AD management tools and ensured prompt resolution.</li>
+                    <li><strong>Achievement:</strong> Successfully resolved <strong>95%</strong> of escalated tickets within SLA.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- START MOVED SECTION: PERSONAL DETAILS & EDUCATION -->
+        <div id="education-details" class="section-content lg:grid lg:grid-cols-2 lg:gap-12 py-12 mb-16 border-t border-gray-700">
+            
+            <!-- Column 1: PERSONAL DETAILS SECTION -->
+            <section id="details" class="reveal-item p-4 lg:p-0">
+                <h3 class="text-3xl font-bold mb-4 text-white border-b pb-2 border-teal-400">PERSONAL DETAILS</h3>
+                
+                <div class="grid sm:grid-cols-2 gap-4 text-left">
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                        <p class="font-semibold text-sm text-teal-400">Location:</p>
+                        <p class="text-base text-gray-300">#2202, Golden Lake View Apartments,<br>Roopena Agrahara, Bommanahalli,<br>Bengaluru 560068</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                        <p class="font-semibold text-sm text-teal-400">Contact:</p>
+                        <p class="text-base text-gray-300 mb-1">+91 8105395074</p>
+                        <p class="text-base text-gray-300">sukumark1010@gmail.com</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-md sm:col-span-2">
+                        <p class="font-semibold text-sm text-teal-400">Languages:</p>
+                        <p class="text-base text-gray-300 space-y-1">
+                            English: <span class="star">★★★★★</span><br>
+                            Kannada: <span class="star">★★★★★</span><br>
+                            Hindi: <span class="star">★★★★</span><span class="star-empty">☆</span><br>
+                            Tulu: <span class="star">★★★★</span><span class="star-empty">☆</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Column 2: EDUCATION & CERTIFICATIONS SECTION -->
+            <section id="certs" class="reveal-item p-4 lg:p-0 mt-8 lg:mt-0">
+                <h3 class="text-3xl font-bold mb-4 text-white border-b pb-2 border-teal-400">EDUCATION & CERTIFICATIONS</h3>
+                
+                <!-- Education -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-xl reveal-item mb-4">
+                    <div class="flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon w-6 h-6 mr-3 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14v4a2 2 0 002 2h10a2 2 0 002-2v-4m-7-5v8m-4-8v8m8-8v8" /></svg>
+                        <p class="text-lg font-semibold text-white">B.E Computer Science & Engineering</p>
+                    </div>
+                    <p class="text-sm text-gray-400 pl-9">Dr. Ambedkar Institute of Technology</p>
+                    <p class="text-xs text-gray-500 pl-9">Graduated: 2017</p>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-xl reveal-item">
+                    <p class="font-semibold text-white mb-2">Certifications & Trainings</p>
+                    <ul class="list-disc pl-5 text-sm text-gray-400 space-y-1">
+                        <li>OCI Certified Foundations (Oracle Cloud Infrastructure 2024)</li>
+                        <li>Cyber Security Essentials (Cisco 2021)</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- END MOVED SECTION -->
+
+        <!-- CONTACT SECTION / FOOTER -->
+        <section id="contact" class="section-content py-12 text-center reveal-item border-t border-gray-700">
+            <h3 class="text-3xl font-bold mb-6 text-white border-b border-teal-400 pb-2 inline-block">LET'S CONNECT</h3>
+            <p class="text-lg text-gray-300 mb-8">
+                I'm actively seeking challenging Senior IT Support roles. Let's discuss how my leadership and technical expertise can benefit your team.
+            </p>
+
+            <div class="flex justify-center flex-wrap gap-8 text-white">
+                <a href="mailto:sukumark1010@gmail.com" class="bg-teal-600 hover:bg-teal-500 text-white font-bold py-3 px-6 rounded-lg shadow-xl transition transform hover:scale-105 reveal-item">
+                    Email Me Now
+                </a>
+                <a href="https://www.linkedin.com/in/surajkumark" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-xl transition transform hover:scale-105 reveal-item">
+                    View LinkedIn Profile
+                </a>
+            </div>
+            
+            <p class="mt-12 text-sm text-gray-500">
+                (Note: Full contact address details are available in the Personal Details section.)
+            </p>
+        </section>
+        
+    </div>
+
+    <script>
+        // --- JAVASCRIPT FOR SCROLL ANIMATIONS ---
+        const sections = document.querySelectorAll('.reveal-item');
+        
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of item is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once revealed
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // --- SCROLLSPY LOGIC FOR ACTIVE NAVIGATION ---
+        const navLinks = document.querySelectorAll('.nav-link');
+        const contentSections = document.querySelectorAll('.section-content');
+
+        const scrollSpyOptions = {
+            root: null,
+            rootMargin: '0px 0px -50% 0px', // Highlights section when it hits the middle of the viewport
+            threshold: 0
+        };
+
+        const scrollSpyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const sectionId = entry.target.id;
+                const correspondingLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+
+                if (correspondingLink) {
+                    navLinks.forEach(link => link.classList.remove('active-nav'));
+                    if (entry.isIntersecting) {
+                        correspondingLink.classList.add('active-nav');
+                    }
+                }
+            });
+        }, scrollSpyOptions);
+
+        contentSections.forEach(section => {
+            scrollSpyObserver.observe(section);
+        });
+
+        // Handle smooth scroll for navigation (important for embed/Wix)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initial visibility check for the header (since it's already visible)
+        document.getElementById('header').classList.add('is-visible');
+    </script>
+</body>
+</html>
